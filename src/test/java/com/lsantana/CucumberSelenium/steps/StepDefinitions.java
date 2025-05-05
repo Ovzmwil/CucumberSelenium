@@ -1,4 +1,4 @@
-package com.lsantana.CucumberSelenium;
+package com.lsantana.CucumberSelenium.steps;
 
 import io.cucumber.java.After;
 import io.cucumber.java.en.*;

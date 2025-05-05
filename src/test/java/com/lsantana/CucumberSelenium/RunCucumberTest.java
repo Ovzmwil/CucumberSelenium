@@ -12,6 +12,6 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
 @IncludeEngines("cucumber")
 @SelectPackages("com.lsantana.CucumberSelenium")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, html:target/cucumber-reports.html")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.lsantana.CucumberSelenium")
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "com.lsantana.CucumberSelenium.steps")
 public class RunCucumberTest {
 }
