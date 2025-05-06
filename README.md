@@ -1,33 +1,47 @@
-# Description
+# 🧪 Automated Web Testing Project (Cucumber + Selenium)
 
-Project using Java 1.8, Cucumber, and Selenium to test a checkout flow in the Swag Labs page.
+This project demonstrates automated UI testing using **Java**, **Cucumber (BDD)**, and **Selenium**, following the **Page Object Model** design pattern, with **Maven** as the build tool.
 
-## Dependencies
+## 📂 Project Structure
 
-- The project uses Java 1.8, so it's necessary to have the JRE environment configured.
-- The project runs with Apache Maven, so it's necessary to have Apache Maven configured. 
-- The project needs a ChromeDriver compatible with your browser's version; the ChromeDriver in this project is 135.0.7049.114.
-
-## Code
-
-This project is built in the Page Object Pattern using a cucumber-archetype.
-- CucumberSelenium
-- -  RunCucumberTest.Java
-- Pages
-- - CheckoutPage
-  - LoginPage
-  - ProductsPage
-- Steps
-- - StepsDefinitions
-- Resources
-- - SwagLabs.feature
-
-## Run tests
-
-```bash
-mvn test
+```
+src
+├── test
+│   └── java
+│       └── com.lsantana.CucumberSelenium
+│           ├── RunCucumberTest.java
+│           ├── steps
+|           ├── pages
+│           └── utils
+└── resources
+    ├── features
+    └── config.properties   
 ```
 
-## Reports
+## 🚀 Technologies Used
+ - Java 8+
+ - Maven
+ - Selenium WebDriver
+ - Cucumber
+ - JUnit
+ - ChromeDriver
 
-A cucumber-reports.html will be generated at target/
+## ⚙️ How to Run
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/Ovzmwil/CucumberSelenium.git
+cd CucumberSelenium
+```
+2. **Run tests using Maven:**
+```bash
+mvn clean test
+```
+3. **View the test report:**
+
+After execution, a file named `cucumber-reports.html` will be generated in the project path `target/`, containing detailed test results.
+
+## 📝 Notes
+- The project uses Java 1.8, so it's necessary to have the JRE environment configured.
+- The project runs with Apache Maven, so it's necessary to have Apache Maven configured.
+- The project needs a ChromeDriver compatible with your browser's version; the ChromeDriver in this project is 135.0.7049.114.
