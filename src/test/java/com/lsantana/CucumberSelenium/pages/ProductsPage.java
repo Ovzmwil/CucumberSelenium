@@ -10,8 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ProductsPage {
-
-	//private WebDriver driver;
 	private WebDriverWait wait;
 
 	@FindBy(xpath = "//div[@class='inventory_item']")
@@ -28,9 +26,14 @@ public class ProductsPage {
 
 	@FindBy(xpath = "//span[@class='shopping_cart_badge']")
 	WebElement btnShoppingCartBadge;
+	
+	@FindBy(id = "react-burger-menu-btn")
+	WebElement btnBurgerMenu;
+	
+	@FindBy(id = "logout_sidebar_link")
+	WebElement btnLogout;
 
 	public ProductsPage(WebDriver driver) {
-		//this.driver = driver;
 		PageFactory.initElements(driver, this);
 		wait = new WebDriverWait(driver, 10);
 	}
@@ -50,5 +53,12 @@ public class ProductsPage {
 	public void clickCartButton() {
 		wait.until(ExpectedConditions.elementToBeClickable(btnShoppingCartBadge));
 		btnShoppingCartBadge.click();
+	}
+
+	public void logout() {
+		wait.until(ExpectedConditions.elementToBeClickable(btnBurgerMenu));
+		btnBurgerMenu.click();
+		wait.until(ExpectedConditions.elementToBeClickable(btnLogout));
+		btnLogout.click();
 	}
 }

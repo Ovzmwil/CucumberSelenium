@@ -7,6 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.lsantana.CucumberSelenium.util.ConfigReader;
+
 public class LoginPage {
 
 	private WebDriver driver;
@@ -45,6 +47,16 @@ public class LoginPage {
 
 	public void clickLogin() {
 		btnLogin.click();
+	}
+	
+	public void loginStandardUser() {
+		fillUsername(ConfigReader.getProperty("default.username"));
+		fillPassword(ConfigReader.getProperty("default.password"));
+		clickLogin();
+	}
+	
+	public boolean loginButtonIsPresent() {
+		return btnLogin.isDisplayed();
 	}
 
 	public boolean errorButtonIsPresent() {
