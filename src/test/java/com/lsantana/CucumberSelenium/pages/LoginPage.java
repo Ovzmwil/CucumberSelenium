@@ -14,16 +14,16 @@ public class LoginPage {
 	private WebDriver driver;
 	private WebDriverWait wait;
 
-	@FindBy(xpath = "//input[@name='user-name']")
+	@FindBy(id = "user-name")
 	WebElement txtUsername;
 
-	@FindBy(xpath = "//input[@name='password']")
+	@FindBy(id = "password")
 	WebElement txtPassword;
 
-	@FindBy(xpath = "//input[@name='login-button']")
+	@FindBy(id = "login-button")
 	WebElement btnLogin;
 
-	@FindBy(xpath = "//*[@class='error-button']")
+	@FindBy(className = "error-button")
 	WebElement btnError;
 
 	public LoginPage(WebDriver driver) {

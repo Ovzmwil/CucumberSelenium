@@ -12,19 +12,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class ProductsPage {
 	private WebDriverWait wait;
 
-	@FindBy(xpath = "//div[@class='inventory_item']")
+	@FindBy(className = "inventory_item")
 	List<WebElement> products;
 
-	@FindBy(xpath = "//div[@class='inventory_item_description']")
+	@FindBy(className = "inventory_item_description")
 	List<WebElement> descriptions;
 
-	@FindBy(xpath = "//div[@class='inventory_item_price']")
+	@FindBy(className = "inventory_item_price")
 	List<WebElement> prices;
 
 	@FindBy(xpath = "//button[contains(text(), 'Add to cart')]")
 	List<WebElement> btnsAddToCart;
 
-	@FindBy(xpath = "//span[@class='shopping_cart_badge']")
+	@FindBy(className = "shopping_cart_badge")
 	WebElement btnShoppingCartBadge;
 	
 	@FindBy(id = "react-burger-menu-btn")

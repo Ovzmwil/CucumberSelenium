@@ -14,31 +14,31 @@ public class CheckoutPage {
 	private WebDriver driver;
 	private WebDriverWait wait;
 
-	@FindBy(xpath = "//button[@name='checkout']")
+	@FindBy(id = "checkout")
 	WebElement btnCheckout;
 
-	@FindBy(xpath = "//input[@name='firstName']")
+	@FindBy(id = "first-name")
 	WebElement txtFirstName;
 
-	@FindBy(xpath = "//input[@name='lastName']")
+	@FindBy(id = "last-name")
 	WebElement txtLastName;
 
-	@FindBy(xpath = "//input[@name='postalCode']")
+	@FindBy(id = "postal-code")
 	WebElement txtPostalCode;
 
-	@FindBy(xpath = "//input[@name='continue']")
+	@FindBy(id = "continue")
 	WebElement btnContinue;
 
-	@FindBy(xpath = "//button[@name='finish']")
+	@FindBy(id = "finish")
 	WebElement btnFinish;
 
-	@FindBy(xpath = "//h2[@class='complete-header']")
+	@FindBy(className = "complete-header")
 	WebElement msgThanking;
 
-	@FindBy(xpath = "//*[@class='error-button']")
+	@FindBy(className = "error-button")
 	WebElement btnError;
 
-	@FindBy(xpath = "//*[@class='title']")
+	@FindBy(className = "title")
 	WebElement checkoutTitle;
 
 	@FindBy(className = "inventory_item_price")
